@@ -13,6 +13,7 @@ class _TableroScreenState extends State<TableroScreen> {
     Widget build(BuildContext context) {
       return SingleChildScrollView(
         child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Header(),
           planos(context),
@@ -29,7 +30,7 @@ class _TableroScreenState extends State<TableroScreen> {
             child: Container(
               color: Colors.black,
               width: 10,
-              height: 1000,
+              height: MediaQuery.of(context).size.width,
             ),
           ),
         ],
