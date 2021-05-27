@@ -8,7 +8,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row( // Creamos una fila
-      mainAxisAlignment: MainAxisAlignment.center, // La aliniamos al centro
+      mainAxisAlignment: MainAxisAlignment.end, // La aliniamos al centro
       children: [
         estadoMesa(Colors.green, "LIBRE"),
         estadoMesa(Colors.red, "OCUPADA"),
@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: defaultPadding),
       color: color,
       height: 20,
-      margin: EdgeInsets.symmetric(horizontal: defaultPadding),
+      margin: EdgeInsets.all(5),
       child: Text(texto, 
           style: TextStyle(color: Colors.white)
         ),

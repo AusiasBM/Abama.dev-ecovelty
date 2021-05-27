@@ -23,14 +23,27 @@ class _TableroScreenState extends State<TableroScreen> {
     }
 
     Widget planos(BuildContext context){
-
+      Color _color = Colors.black;
       return Row(
         children: [
           Expanded(
             child: Container(
-              color: Colors.black,
-              width: 10,
-              height: MediaQuery.of(context).size.width,
+              width: 1,
+              margin: EdgeInsets.all(5),
+              height: MediaQuery.of(context).size.height - MediaQuery.of(context).size.height/4,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: _color,
+                  width: 2,
+                ),
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    _color = Colors.white;
+                  });
+                },
+              ),
             ),
           ),
         ],
